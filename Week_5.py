@@ -89,7 +89,7 @@ def DungeonGame():
                 print('This room is closed.')
             else:
                 loc = exit_directions[loc][n[0]]
-        elif n[0] == 'CloseDoor':  # close door command
+        elif n[0] == 'CloseDoor' and len(n) == 2:  # close door command
             if exit_directions[loc][n[1]] < -1:
                 print("The door is already closed.")
             elif exit_directions[loc][n[1]] == -1:
